@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000914;
+  color: #fff;
+}
+
+/* Futuristic gradient grid */
+.bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0,200,255,0.18), transparent),
+              url("logo.jpg") center/cover repeat;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding-top: 70px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card */
+.card {
+  background: rgba(10, 20, 35, 0.55);
+  border: 1px solid rgba(0, 210, 255, 0.4);
+  backdrop-filter: blur(18px);
+  padding: 45px 28px;
+  border-radius: 28px;
+  box-shadow: 0 0 45px rgba(0, 180, 255, 0.25);
+  animation: slideIn 1s ease;
+}
+
+/* Title */
+h1 {
+  font-size: 1.85rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #00eaff, #7dfdff, #00eaff, #ffd466);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subscriber Text */
+.subs {
+  margin-top: 6px;
+  font-size: 0.93rem;
+  opacity: 0.9;
+  color: #d9f8ff;
+}
+
+/* Description */
+.info {
+  margin: 22px 0;
+  color: #bcecff;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.info strong {
+  color: #00eaff;
+}
+
+/* Timer */
+.timer-box p {
+  font-size: 0.85rem;
+  color: #a7eaff;
+}
+
+#timer {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #00eaff;
+  text-shadow: 0 0 18px #00c4ff;
+}
+
+/* Button */
+#joinBtn {
+  margin-top: 30px;
+  padding: 13px 42px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, #00eaff, #9ffcff, #ffd466);
+  transition: 0.4s ease;
+  animation: glowPulse 1.6s infinite ease-in-out alternate;
+}
+
+#joinBtn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.7);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes glowPulse {
+  from { opacity: 0.8; }
+  to   { opacity: 1; }
+}
+
+/* Mobile */
+@media (max-width: 460px) {
+  h1 { font-size: 1.6rem; }
+  #joinBtn { font-size: 0.95rem; padding: 11px 34px; }
+}
